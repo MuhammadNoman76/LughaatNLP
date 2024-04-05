@@ -354,6 +354,11 @@ text = "آپ کیسے ہیں؟"
 normalized_text = LughaatNLP(text)
 print(normalized_text)
 ```
+##	Future Work
+
+The future roadmap for LughaatNLP includes the
+following features: - Urdu language translator - Urdu chatbot models - Part-of-speech tagging (POS) - Named entity recognition (NER) - Text-to-speech and speech-to-text capabilities for Urdu - Urdu text summarization
+To implement these features, resources such as servers and GPU for training are required. Therefore, Muhammad Noman is collecting funds to support the development and maintenance of this library.
 
 ## Contributing
 
