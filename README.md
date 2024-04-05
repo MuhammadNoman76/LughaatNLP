@@ -289,7 +289,7 @@ most_similar = spell_checker.most_similar_word(word, 70)
 print("This will return the most similar single word in string", most_similar)
 ```
 
-###24. `get_similar_words_percentage(self, input_word, threshold)`
+### 24. `get_similar_words_percentage(self, input_word, threshold)`
 
 This function takes an input word and a similarity threshold as arguments and returns a list of tuples containing similar words and their corresponding similarity percentages.
 
