@@ -13,6 +13,8 @@ LughaatNLP is the first comprehensive Urdu language preprocessing library develo
 
 ## Functions
 
+# Normalization
+
 ### 1. `normalize_characters(text)`
 
 This function normalizes the Urdu characters in the given text by mapping incorrect Urdu characters to their correct forms. Sometimes, single Unicode characters representing Urdu may be written in multiple forms, and this function normalizes them accordingly.
