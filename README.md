@@ -339,7 +339,7 @@ Note: These examples assume that you have an instance of the `UrduTextNormalizer
 You can install the `LughaatUrdu` library from PyPI using pip:
 
 ```
-pip install lughaat-urdu
+pip install lughaatNLP
 ```
 
 ## Usage
@@ -347,11 +347,11 @@ pip install lughaat-urdu
 After installing the library, you can import the necessary functions or classes in your Python script:
 
 ```python
-from lughaat_urdu import UrduTextNormalizer
+from lughaat_urdu import LughaatNLP
 
-urdu_normalizer = UrduTextNormalizer()
+urdu_normalizer = LughaatNLP()
 text = "آپ کیسے ہیں؟"
-normalized_text = urdu_normalizer.normalize(text)
+normalized_text = LughaatNLP(text)
 print(normalized_text)
 ```
 
