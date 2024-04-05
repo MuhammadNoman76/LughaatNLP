@@ -282,7 +282,7 @@ print("Urdu Stemming ", stemmed_sentence)  # Output: میں کتاب پڑھ ہو
 
 Spell checking involves identifying and correcting misspelled words in Urdu text.
 
-### 22. `corrected_sentence_spelling(self, input_word, threshold)`
+### 22. `corrected_sentence_spelling(input_word, threshold)`
 
 This function takes an input sentence and a similarity threshold as arguments and returns the corrected sentence with potentially misspelled words replaced by the most similar words from the vocabulary.
 
@@ -294,7 +294,7 @@ corrected_sentence = spell_checker.corrected_sentence_spelling(sentence, 60)
 print("This correct spelling of sentence itself", corrected_sentence)
 ```
 
-### 23. `most_similar_word(self, input_word, threshold)`
+### 23. `most_similar_word(input_word, threshold)`
 
 This function takes an input word and a similarity threshold as arguments and returns the most similar word from the vocabulary based on the Levenshtein distance.
 
@@ -306,7 +306,7 @@ most_similar = spell_checker.most_similar_word(word, 70)
 print("This will return the most similar single word in string", most_similar)
 ```
 
-### 24. `get_similar_words_percentage(self, input_word, threshold)`
+### 24. `get_similar_words_percentage(input_word, threshold)`
 
 This function takes an input word and a similarity threshold as arguments and returns a list of tuples containing similar words and their corresponding similarity percentages.
 
@@ -318,7 +318,7 @@ similar_words_with_percentage = spell_checker.get_similar_words_percentage(word,
 print("This will return the most similar words in list with percentage", similar_words_with_percentage)
 ```
 
-### 25. `get_similar_words(self, input_word, threshold)`
+### 25. `get_similar_words(input_word, threshold)`
 
 This function takes an input word and a similarity threshold as arguments and returns a list of similar words from the vocabulary based on the Levenshtein distance.
 
