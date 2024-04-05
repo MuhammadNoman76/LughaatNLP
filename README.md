@@ -265,6 +265,58 @@ stemmed_sentence = urdu_normalizer.urdu_stemmer(sentence)
 print("Urdu Stemming ", stemmed_sentence)  # Output: میں کتاب پڑھ ہوں۔
 ```
 
+### 22. `corrected_sentence_spelling(self, input_word, threshold)`
+
+This function takes an input sentence and a similarity threshold as arguments and returns the corrected sentence with potentially misspelled words replaced by the most similar words from the vocabulary.
+
+**Example:**
+
+```python
+sentence = 'سسب سےا بڑاا ملکا ہے'
+corrected_sentence = spell_checker.corrected_sentence_spelling(sentence, 60)
+print("This correct spelling of sentence itself", corrected_sentence)
+```
+
+### 23. `most_similar_word(self, input_word, threshold)`
+
+This function takes an input word and a similarity threshold as arguments and returns the most similar word from the vocabulary based on the Levenshtein distance.
+
+**Example:**
+
+```python
+word = 'پاکستاان'
+most_similar = spell_checker.most_similar_word(word, 70)
+print("This will return the most similar single word in string", most_similar)
+```
+
+###24. `get_similar_words_percentage(self, input_word, threshold)`
+
+This function takes an input word and a similarity threshold as arguments and returns a list of tuples containing similar words and their corresponding similarity percentages.
+
+**Example:**
+
+```python
+word = 'پاکستاان'
+similar_words_with_percentage = spell_checker.get_similar_words_percentage(word, 70)
+print("This will return the most similar words in list with percentage", similar_words_with_percentage)
+```
+
+### 25. `get_similar_words(self, input_word, threshold)`
+
+This function takes an input word and a similarity threshold as arguments and returns a list of similar words from the vocabulary based on the Levenshtein distance.
+
+**Example:**
+
+```python
+word = 'پاکستاان'
+similar_words = spell_checker.get_similar_words(word, 70)
+print("This will return the most similar words in list only you can access word using index", similar_words)
+```
+
+These functions leverage the Levenshtein distance algorithm to calculate the similarity between the input word or sentence and the words in the vocabulary. The `threshold` parameter is used to filter out words with a similarity percentage below the specified threshold.
+
+Note: These examples assume that you have an instance of the `UrduTextNormalizer` class named `spell_checker` and have imported the `Levenshtein` module for calculating the edit distance.
+
 ## Installation
 
 You can install the `LughaatUrdu` library from PyPI using pip:
