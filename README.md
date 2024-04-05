@@ -133,19 +133,7 @@ preserved_text = urdu_normalizer.preserve_special_characters(text)
 print("make a space between every special character and word so tokenize easily", preserved_text)  # Output: میں @ پاکستان _ سے _ ہوں ۔
 ```
 
-### 11. `remove_stopwords(text)`
-
-This function removes stopwords from the Urdu text.
-
-**Example:**
-
-```python
-text = "میں اس کتاب کو پڑھنا چاہتا ہوں۔"
-filtered_text = urdu_normalizer.remove_stopwords(text)
-print("Remove Stop words:", filtered_text)  # Output: کتاب پڑھنا چاہتا ہوں۔
-```
-
-### 12. `remove_numbers(text)`
+### 11. `remove_numbers(text)`
 
 This function removes both Urdu and English numbers from the Urdu text.
 
@@ -157,7 +145,7 @@ number_removed = urdu_normalizer.remove_numbers(text)
 print("Remove All numbers whether they are Urdu or English: ", number_removed)  # Output: میں سال کا ہوں اور میری عمر ہے۔
 ```
 
-### 13. `remove_english(text)`
+### 12. `remove_english(text)`
 
 This function removes English characters from the Urdu text.
 
@@ -169,7 +157,7 @@ urdu_only = urdu_normalizer.remove_english(text)
 print("Remove All English characters from text: ", urdu_only)  # Output:  ام لرننگ اردو
 ```
 
-### 14. `pure_urdu(text)`
+### 13. `pure_urdu(text)`
 
 This function removes all non-Urdu characters and numbers from the text, leaving only Urdu characters and special characters used in Urdu.
 
@@ -181,7 +169,7 @@ pure_urdu_text = urdu_normalizer.pure_urdu(text)
 print(pure_urdu_text)  # Output: میں اردو سیکھ رہا ہوں۔
 ```
 
-### 15. `just_urdu(text)`
+### 14. `just_urdu(text)`
 
 This function removes all non-Urdu characters, numbers, and special characters, just leaving only pure Urdu text even not special character used in urdu.
 
@@ -193,7 +181,7 @@ just_urdu_text = urdu_normalizer.just_urdu(text)
 print(just_urdu_text)  # Output: میں اردو سیکھ رہا ہوں 
 ```
 
-### 16. `remove_urls(text)`
+### 15. `remove_urls(text)`
 
 This function removes URLs from the Urdu text.
 
@@ -205,7 +193,7 @@ no_urls = urdu_normalizer.remove_urls(text)
 print("Remove All URLs", no_urls)  # Output: میں  پر گیا۔
 ```
 
-### 17. `remove_special_characters(text)`
+### 16. `remove_special_characters(text)`
 
 This function removes all special characters from the Urdu text.
 
@@ -217,7 +205,7 @@ no_special_chars = urdu_normalizer.remove_special_characters(text)
 print("Remove All Special characters", no_special_chars)  # Output: میں پاکستان سے ہوں
 ```
 
-### 18. `remove_special_characters_exceptUrdu(text)`
+### 17. `remove_special_characters_exceptUrdu(text)`
 
 This function removes all special characters from the Urdu text, except for those commonly used in the Urdu language (e.g., ؟, ۔, ،).
 
@@ -228,6 +216,23 @@ text = "میں@پاکستان??_سے_ہوں؟"
 urdu_special_chars = urdu_normalizer.remove_special_characters_exceptUrdu(text)
 print("Remove All Special characters except those which are used in Urdu language eg( ؟ ۔ ، ): ", urdu_special_chars)  # Output: میں پاکستان سے ہوں؟
 ```
+# Stop Words Removing
+
+### 18. `remove_stopwords(text)`
+
+This function removes stopwords from the Urdu text.
+
+**Example:**
+
+```python
+text = "میں اس کتاب کو پڑھنا چاہتا ہوں۔"
+filtered_text = urdu_normalizer.remove_stopwords(text)
+print("Remove Stop words:", filtered_text)  # Output: کتاب پڑھنا چاہتا ہوں۔
+```
+
+# Tokenization
+
+Tokenization involves breaking down Urdu text into individual tokens, considering the intricacies of Urdu script and language structure.
 
 ### 19. `urdu_tokenize(text)`
 
@@ -240,6 +245,9 @@ text = "میں پاکستان سے ہوں۔"
 tokens = urdu_normalizer.urdu_tokenize(text)
 print("Tokenization for Urdu language:", tokens)  # Output: ['میں', 'پاکستان', 'سے', 'ہوں۔']
 ```
+# Lemmatization and Stemming
+
+Lemmatization involves converting inflected words into their base or dictionary form, while stemming reduces words to their root form.
 
 ### 20. `lemmatize_sentence(sentence)`
 
@@ -264,6 +272,9 @@ sentence = "میں کتابیں پڑھتا ہوں۔"
 stemmed_sentence = urdu_normalizer.urdu_stemmer(sentence)
 print("Urdu Stemming ", stemmed_sentence)  # Output: میں کتاب پڑھ ہوں۔
 ```
+# Spell Checker
+
+Spell checking involves identifying and correcting misspelled words in Urdu text.
 
 ### 22. `corrected_sentence_spelling(self, input_word, threshold)`
 
