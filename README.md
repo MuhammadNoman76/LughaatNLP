@@ -44,18 +44,6 @@ This function performs all-in-one normalization on the Urdu text, including char
 **Example:**
 
 ```python
-text = "آپ کیسے ہیں؟ میں 23 سال کا ہوں۔"
-normalized_text = urdu_normalizer.normalize(text)
-print(normalized_text)  # Output: اپ کیسے ہیں ؟ میں ۲۳ سال کا ہوں ۔
-```
-
-### 3. `normalize(text)`
-
-This function performs all-in-one normalization on the Urdu text, including character normalization, diacritic removal, punctuation handling, digit conversion, and special character preservation.
-
-**Example:**
-
-```python
 text = "آپ کیسے ہیں؟ میں ۲۳ سال کا ہوں۔"
 normalized_text = urdu_normalizer.normalize(text)
 print("Normalize all at once together of Urdu: ", normalized_text)  # Output: اپ کیسے ہیں ؟ میں 23 سال کا ہوں ۔
