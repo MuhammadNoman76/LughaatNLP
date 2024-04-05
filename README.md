@@ -2,10 +2,9 @@
 
 LughaatNLP is the first comprehensive Urdu language preprocessing library developed for NLP tasks in Pakistan. It provides essential tools for tokenization, lemmatization, stop word removal, and normalization specifically tailored for the Urdu language.
 
-<div style="text-align:center;">
-    <img src="https://i.imgur.com/6lKyQlo.png" alt="Alt Text" width="500" height="500">
-</div>
-
+<p align="center">
+  <img src="https://i.imgur.com/6lKyQlo.png" alt="Alt Text" width="500" height="500">
+</p>
 
 ## Features
 
