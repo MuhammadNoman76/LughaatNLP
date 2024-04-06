@@ -379,4 +379,4 @@ If you find any issues or have suggestions for improvements, please feel free to
 
 ## License
 
-This project is licensed under the [MIT License](https://drive.google.com/file/d/1YcxoYrL3atF7U7vYKK_KFiKvDF-YiywT/view?usp=drive_link).
+This project is licensed under the [MIT License](LICENSE).
