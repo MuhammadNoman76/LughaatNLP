@@ -10,6 +10,10 @@ here you can see documentation:
 **Google Colab Link:** 
    The documentation includes a link to a Google Colab notebook:
    [Google Colab Notebook Link](https://colab.research.google.com/drive/1lLaUBiFq61-B7GyQ0wdNg9FyLCraAcDU?usp=sharing)
+<br><br>
+**pypi Link:** 
+   The documentation includes a link to a Google Colab notebook:
+   [pypi Link](https://pypi.org/project/LughaatNLP)
 
 <br><br>
 <p align="center">
