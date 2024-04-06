@@ -7,7 +7,11 @@ LughaatNLP is the first comprehensive Urdu language preprocessing library develo
 here you can see documentation:
 [Download Document](https://drive.google.com/uc?export=download&id=19G62jSJhFvWe6FSUMlllhWMVggX8UxbO)
 <br><br>
+**Google Colab Link:** 
+   The documentation includes a link to a Google Colab notebook:
+   [Google Colab Notebook Link](https://colab.research.google.com/drive/1lLaUBiFq61-B7GyQ0wdNg9FyLCraAcDU?usp=sharing)
 
+<br><br>
 <p align="center">
   <img src="https://i.imgur.com/6lKyQlo.png" alt="Alt Text" width="500" height="500">
 </p>
@@ -34,7 +38,7 @@ This function normalizes the Urdu characters in the given text by mapping incorr
 
 ```python
 text = "آپ کیسے ہیں؟"
-normalized_text = urdu_normalizer.normalize_characters(text)
+normalized_text = urdu_text_processing.normalize_characters(text)
 print(normalized_text)  # Output: اپ کیسے ہیں؟
 ```
 
@@ -46,7 +50,7 @@ This function simplifies Urdu characters by combining certain combinations into 
 
 ```python
 text = "اُردو"
-normalized_text = urdu_normalizer.normalize_combine_characters(text)
+normalized_text = urdu_text_processing.normalize_combine_characters(text)
 print(normalized_text)  # Output: اُردو
 ```
 
@@ -58,7 +62,7 @@ This function performs all-in-one normalization on the Urdu text, including char
 
 ```python
 text = "آپ کیسے ہیں؟ میں ۲۳ سال کا ہوں۔"
-normalized_text = urdu_normalizer.normalize(text)
+normalized_text = urdu_text_processing.normalize(text)
 print("Normalize all at once together of Urdu: ", normalized_text)  # Output: اپ کیسے ہیں ؟ میں 23 سال کا ہوں ۔
 ```
 
@@ -70,7 +74,7 @@ This function removes diacritics (zabar, zer, pesh) from the Urdu text.
 
 ```python
 text = "کِتَاب"
-diacritics_removed = urdu_normalizer.remove_diacritics(text)
+diacritics_removed = urdu_text_processing.remove_diacritics(text)
 print("Remove all Diacritic (Zabar - Zer - Pesh): ", diacritics_removed)  # Output: کتاب
 ```
 
@@ -82,7 +86,7 @@ This function remove spaces after punctuations (excluding numbers) and removes s
 
 ```python
 text = "کیا آپ کھانا کھانا چاہتے ہیں ؟ میں کھانا کھاؤں گا  ۔"
-punctuated_text = urdu_normalizer.punctuations_space(text)
+punctuated_text = urdu_text_processing.punctuations_space(text)
 print(punctuated_text)  # Output: کیا آپ کھانا کھانا چاہتے ہیں؟ میں کھانا کھاؤں گا۔
 ```
 
@@ -94,7 +98,7 @@ This function replaces English digits with Urdu digits.
 
 ```python
 text = "میں 23 سال کا ہوں۔"
-english_digits = urdu_normalizer.replace_digits(text)
+english_digits = urdu_text_processing.replace_digits(text)
 print("Replace All maths numbers with Urdu number eg(2 1 3 1 -> ۲ ۱ ۳ ۱): ", english_digits)  # Output: میں ۲۳ سال کا ہوں۔
 ```
 
@@ -106,7 +110,7 @@ This function removes Urdu numbers from the Urdu text.
 
 ```python
 text = "میں  22 ۲۳ سال کا ہوں۔"
-no_urdu_numbers = urdu_normalizer.remove_numbers_urdu(text)
+no_urdu_numbers = urdu_text_processing.remove_numbers_urdu(text)
 print("Remove Urdu numbers from text: ", no_urdu_numbers)  # Output: میں 22 سال کا ہوں۔
 ```
 
@@ -118,7 +122,7 @@ This function removes English numbers from the Urdu text.
 
 ```python
 text = "میں ۲۳ 23 سال کا ہوں۔"
-no_english_numbers = urdu_normalizer.remove_numbers_english(text)
+no_english_numbers = urdu_text_processing.remove_numbers_english(text)
 print("Remove English numbers from text: ", no_english_numbers)  # Output: میں ۲۳ سال کا ہوں۔
 ```
 
@@ -130,7 +134,7 @@ This function removes extra whitespaces from the Urdu text.
 
 ```python
 text = "میں   گھر   جا   رہا   ہوں۔"
-cleaned_text = urdu_normalizer.remove_whitespace(text)
+cleaned_text = urdu_text_processing.remove_whitespace(text)
 print("Remove All extra space between words", cleaned_text)  # Output: میں گھر جا رہا ہوں۔
 ```
 
@@ -142,7 +146,7 @@ This function adds spaces around special characters in the Urdu text to facilita
 
 ```python
 text = "میں@پاکستان_سے_ہوں۔"
-preserved_text = urdu_normalizer.preserve_special_characters(text)
+preserved_text = urdu_text_processing.preserve_special_characters(text)
 print("make a space between every special character and word so tokenize easily", preserved_text)  # Output: میں @ پاکستان _ سے _ ہوں ۔
 ```
 
@@ -154,7 +158,7 @@ This function removes both Urdu and English numbers from the Urdu text.
 
 ```python
 text = "میں ۲۳ سال کا ہوں اور میری عمر 23 ہے۔"
-number_removed = urdu_normalizer.remove_numbers(text)
+number_removed = urdu_text_processing.remove_numbers(text)
 print("Remove All numbers whether they are Urdu or English: ", number_removed)  # Output: میں سال کا ہوں اور میری عمر ہے۔
 ```
 
@@ -166,7 +170,7 @@ This function removes English characters from the Urdu text.
 
 ```python
 text = "I am learning Urdu."
-urdu_only = urdu_normalizer.remove_english(text)
+urdu_only = urdu_text_processing.remove_english(text)
 print("Remove All English characters from text: ", urdu_only)  # Output:  ام لرننگ اردو
 ```
 
@@ -178,7 +182,7 @@ This function removes all non-Urdu characters and numbers from the text, leaving
 
 ```python
 text = "I ?  # & am learning Urdu. میں اردو سیکھ رہا ہوں۔ 123"
-pure_urdu_text = urdu_normalizer.pure_urdu(text)
+pure_urdu_text = urdu_text_processing.pure_urdu(text)
 print(pure_urdu_text)  # Output: میں اردو سیکھ رہا ہوں۔
 ```
 
@@ -190,7 +194,7 @@ This function removes all non-Urdu characters, numbers, and special characters, 
 
 ```python
 text = "I am learning Urdu. میں اردو سیکھ رہا ہوں۔ 123"
-just_urdu_text = urdu_normalizer.just_urdu(text)
+just_urdu_text = urdu_text_processing.just_urdu(text)
 print(just_urdu_text)  # Output: میں اردو سیکھ رہا ہوں 
 ```
 
@@ -202,7 +206,7 @@ This function removes URLs from the Urdu text.
 
 ```python
 text = "میں https://www.example.com پر گیا۔"
-no_urls = urdu_normalizer.remove_urls(text)
+no_urls = urdu_text_processing.remove_urls(text)
 print("Remove All URLs", no_urls)  # Output: میں  پر گیا۔
 ```
 
@@ -214,7 +218,7 @@ This function removes all special characters from the Urdu text.
 
 ```python
 text = "میں@پاکستان_سے_ہوں۔"
-no_special_chars = urdu_normalizer.remove_special_characters(text)
+no_special_chars = urdu_text_processing.remove_special_characters(text)
 print("Remove All Special characters", no_special_chars)  # Output: میں پاکستان سے ہوں
 ```
 
@@ -226,7 +230,7 @@ This function removes all special characters from the Urdu text, except for thos
 
 ```python
 text = "میں@پاکستان??_سے_ہوں؟"
-urdu_special_chars = urdu_normalizer.remove_special_characters_exceptUrdu(text)
+urdu_special_chars = urdu_text_processing.remove_special_characters_exceptUrdu(text)
 print("Remove All Special characters except those which are used in Urdu language eg( ؟ ۔ ، ): ", urdu_special_chars)  # Output: میں پاکستان سے ہوں؟
 ```
 # Stop Words Removing
@@ -239,7 +243,7 @@ This function removes stopwords from the Urdu text.
 
 ```python
 text = "میں اس کتاب کو پڑھنا چاہتا ہوں۔"
-filtered_text = urdu_normalizer.remove_stopwords(text)
+filtered_text = urdu_text_processing.remove_stopwords(text)
 print("Remove Stop words:", filtered_text)  # Output: کتاب پڑھنا چاہتا ہوں۔
 ```
 
@@ -255,7 +259,7 @@ This function tokenizes the Urdu text into individual tokens (words, numbers, an
 
 ```python
 text = "میں پاکستان سے ہوں۔"
-tokens = urdu_normalizer.urdu_tokenize(text)
+tokens = urdu_text_processing.urdu_tokenize(text)
 print("Tokenization for Urdu language:", tokens)  # Output: ['میں', 'پاکستان', 'سے', 'ہوں۔']
 ```
 # Lemmatization and Stemming
@@ -270,7 +274,7 @@ This function performs lemmatization on the Urdu sentence, replacing words with 
 
 ```python
 sentence = "میں کتابیں پڑھتا ہوں۔"
-lemmatized_sentence = urdu_normalizer.lemmatize_sentence(sentence)
+lemmatized_sentence = urdu_text_processing.lemmatize_sentence(sentence)
 print("lemmatize the words ", lemmatized_sentence)  # Output: میں کتاب پڑھنا ہوں۔
 ```
 
@@ -282,7 +286,7 @@ This function performs stemming on the Urdu sentence, reducing words to their ro
 
 ```python
 sentence = "میں کتابیں پڑھتا ہوں۔"
-stemmed_sentence = urdu_normalizer.urdu_stemmer(sentence)
+stemmed_sentence = urdu_text_processing.urdu_stemmer(sentence)
 print("Urdu Stemming ", stemmed_sentence)  # Output: میں کتاب پڑھ ہوں۔
 ```
 # Spell Checker
@@ -354,11 +358,11 @@ pip install lughaatNLP
 After installing the library, you can import the necessary functions or classes in your Python script:
 
 ```python
-from lughaat_urdu import LughaatNLP
+from LughaatNLP import LughaatNLP
 
-urdu_normalizer = LughaatNLP()
+urdu_text_processing = LughaatNLP()
 text = "آپ کیسے ہیں؟"
-normalized_text = LughaatNLP(text)
+normalized_text = urdu_text_processing.normalize(text)
 print(normalized_text)
 ```
 ##	Future Work
@@ -375,4 +379,4 @@ If you find any issues or have suggestions for improvements, please feel free to
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://drive.google.com/file/d/1YcxoYrL3atF7U7vYKK_KFiKvDF-YiywT/view?usp=drive_link).
