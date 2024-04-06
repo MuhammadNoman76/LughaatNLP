@@ -357,6 +357,12 @@ You can install the `LughaatUrdu` library from PyPI using pip:
 pip install lughaatNLP
 ```
 
+Alternatively, you can manually install it by downloading and unzipping the provided `LughaatNLP.rar` file and installing the wheel file using pip:
+
+```bash
+pip install path_to_wheel_file/LughaatNLP-1.0.2-py3-none-any.whl
+```
+
 ## Usage
 
 After installing the library, you can import the necessary functions or classes in your Python script:
