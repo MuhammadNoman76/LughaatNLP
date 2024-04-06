@@ -371,7 +371,7 @@ To implement these features, resources such as servers and GPU for training are 
 
 This library was created by Muhammad Noman, a student at Iqra University. You can reach him via email at muhammadnomanshafiq76@gmail.com or connect with him on [LinkedIn](https://www.linkedin.com/in/muhammad-noman-shafiq-5982b62ab/).
 
-If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the GitHub repository.
+If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/MuhammadNoman76/LughaatNLP).
 
 ## License
 
