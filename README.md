@@ -1,19 +1,24 @@
 # LughaatNLP
 
-LughaatNLP is the first comprehensive Urdu language preprocessing library developed for NLP tasks in Pakistan. It provides essential tools for tokenization, lemmatization, stop word removal, and normalization specifically tailored for the Urdu language.
+LughaatNLP is the first comprehensive Urdu language preprocessing library developed for NLP tasks in Pakistan. It provides essential tools for tokenization, lemmatization, stop word removal, Part of speech (POS), Name Entity Relationship (NER) and normalization specifically tailored for the Urdu language.
 
 # Documentation
 
 here you can see documentation:
-[Download Document](https://drive.google.com/uc?export=download&id=19G62jSJhFvWe6FSUMlllhWMVggX8UxbO)
+[Download Document](https://drive.google.com/file/d/1guI7VSlrnSQDBk40qcqvEOX_TKbCJd9b/view?usp=drive_link)
 <br><br>
 **Google Colab Link:** 
    The documentation includes a link to a Google Colab notebook:
    [Google Colab Notebook Link](https://colab.research.google.com/drive/1lLaUBiFq61-B7GyQ0wdNg9FyLCraAcDU?usp=sharing)
 <br><br>
-**pypi Link:** 
-   The documentation includes a link to a pypi link:
-   [pypi Link](https://pypi.org/project/LughaatNLP)
+**Pypi Link:** 
+   The documentation includes a link to a Pypi link:
+   [Pypi Link](https://pypi.org/project/LughaatNLP)
+<br><br>
+**YouTube Link:** 
+   The documentation includes a link to a Youtube link for library tutorial:
+   [YouTube Link](https://www.youtube.com/playlist?list=PL4tcmUwDtJEIHZhAZ3XP9U6ZJzaS4RFbd)
+
 
 <br><br>
 <p align="center">
@@ -29,6 +34,8 @@ here you can see documentation:
 - **Normalization**: Standardizes text by removing diacritics, normalizing character variations, and handling common orthographic variations in Urdu.
 - **Stemming**: Reduces words to their root form, improving text analysis and comprehension in Urdu.
 - **Spell Checker**: Identifies and corrects misspelled words in Urdu text, enhancing text quality and readability.
+- **Part of Speech Extraction**: Tag words with their grammatical categories, enabling advanced syntactic analysis.
+- **Named Entity Recognition (NER)**: Identify and extract names of entities like persons, organizations, or locations.
 
 ## Functions
 
@@ -239,7 +246,7 @@ print("Remove All Special characters except those which are used in Urdu languag
 ```
 # Stop Words Removing
 
-### 18. `remove_stopwords(text)`
+### 1. `remove_stopwords(text)`
 
 This function removes stopwords from the Urdu text.
 
@@ -255,7 +262,7 @@ print("Remove Stop words:", filtered_text)  # Output: کتاب پڑھنا چاہ
 
 Tokenization involves breaking down Urdu text into individual tokens, considering the intricacies of Urdu script and language structure.
 
-### 19. `urdu_tokenize(text)`
+### 1. `urdu_tokenize(text)`
 
 This function tokenizes the Urdu text into individual tokens (words, numbers, and punctuations).
 
@@ -270,7 +277,7 @@ print("Tokenization for Urdu language:", tokens)  # Output: ['میں', 'پاکس
 
 Lemmatization involves converting inflected words into their base or dictionary form, while stemming reduces words to their root form.
 
-### 20. `lemmatize_sentence(sentence)`
+### 1. `lemmatize_sentence(sentence)`
 
 This function performs lemmatization on the Urdu sentence, replacing words with their base or dictionary form.
 
@@ -282,7 +289,7 @@ lemmatized_sentence = urdu_text_processing.lemmatize_sentence(sentence)
 print("lemmatize the words ", lemmatized_sentence)  # Output: میں کتاب پڑھنا ہوں۔
 ```
 
-### 21. `urdu_stemmer(sentence)`
+### 2. `urdu_stemmer(sentence)`
 
 This function performs stemming on the Urdu sentence, reducing words to their root or stem form.
 
@@ -297,49 +304,53 @@ print("Urdu Stemming ", stemmed_sentence)  # Output: میں کتاب پڑھ ہو
 
 Spell checking involves identifying and correcting misspelled words in Urdu text.
 
-### 22. `corrected_sentence_spelling(input_word, threshold)`
+### 1. `corrected_sentence_spelling(input_word, threshold)`
 
 This function takes an input sentence and a similarity threshold as arguments and returns the corrected sentence with potentially misspelled words replaced by the most similar words from the vocabulary.
 
 **Example:**
 
 ```python
+spell_checker = LughaatNLP()
 sentence = 'سسب سےا بڑاا ملکا ہے'
 corrected_sentence = spell_checker.corrected_sentence_spelling(sentence, 60)
 print("This correct spelling of sentence itself", corrected_sentence)
 ```
 
-### 23. `most_similar_word(input_word, threshold)`
+### 2. `most_similar_word(input_word, threshold)`
 
 This function takes an input word and a similarity threshold as arguments and returns the most similar word from the vocabulary based on the Levenshtein distance.
 
 **Example:**
 
 ```python
+spell_checker = LughaatNLP()
 word = 'پاکستاان'
 most_similar = spell_checker.most_similar_word(word, 70)
 print("This will return the most similar single word in string", most_similar)
 ```
 
-### 24. `get_similar_words_percentage(input_word, threshold)`
+### 3. `get_similar_words_percentage(input_word, threshold)`
 
 This function takes an input word and a similarity threshold as arguments and returns a list of tuples containing similar words and their corresponding similarity percentages.
 
 **Example:**
 
 ```python
+spell_checker = LughaatNLP()
 word = 'پاکستاان'
 similar_words_with_percentage = spell_checker.get_similar_words_percentage(word, 70)
 print("This will return the most similar words in list with percentage", similar_words_with_percentage)
 ```
 
-### 25. `get_similar_words(input_word, threshold)`
+### 4. `get_similar_words(input_word, threshold)`
 
 This function takes an input word and a similarity threshold as arguments and returns a list of similar words from the vocabulary based on the Levenshtein distance.
 
 **Example:**
 
 ```python
+spell_checker = LughaatNLP()
 word = 'پاکستاان'
 similar_words = spell_checker.get_similar_words(word, 70)
 print("This will return the most similar words in list only you can access word using index", similar_words)
@@ -349,11 +360,60 @@ These functions leverage the Levenshtein distance algorithm to calculate the sim
 
 Note: These examples assume that you have an instance of the `UrduTextNormalizer` class named `spell_checker` and have imported the `Levenshtein` module for calculating the edit distance.
 
+# Part of Speech
+
+The `pos_tags_urdu` function is used for part-of-speech tagging in Urdu text. It takes an Urdu sentence as input and returns a list of dictionaries where each word is paired with its assigned part-of-speech tag, such as nouns (`NN`), verbs (`VB`), adjectives (`ADJ`), etc.
+
+### 1. `pos_tagger.pos_tags_urdu (sentence)`
+
+The example output demonstrates how words like "میرے" (`G` for postposition) and "تعلیم" (`NN` for noun) are tagged based on their grammatical roles within the sentence.
+
+**Example:**
+
+```python
+from LughaatNLP import POS_urdu
+
+pos_tagger = POS_urdu()
+
+sentence = "میرے والدین نے میری تعلیم اور تربیت میں بہت محنت کی تاکہ میں اپنی زندگی میں کامیاب ہو سکوں۔"
+
+pos_tagger = POS_urdu()
+predicted_pos_tags = pos_tagger.pos_tags_urdu (sentence)
+
+print(predicted_pos_tags)
+# output => [{'Word': 'میرے', 'POS_Tag': 'G'}, {'Word': 'والدین', 'POS_Tag': 'NN'},{'Word': 'نے', 'POS_Tag': 'P'},{'Word': 'میری', 'POS_Tag': 'G'},{'Word': 'تعلیم', 'POS_Tag': 'NN'},{'Word': 'اور', 'POS_Tag': 'CC'},{'Word': 'تربیت', 'POS_Tag': 'NN'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'بہت', 'POS_Tag': 'ADV'},{'Word': 'محنت', 'POS_Tag': 'NN'},{'Word': 'کی', 'POS_Tag': 'VB'},{'Word': 'تاکہ', 'POS_Tag': 'SC'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'اپنی', 'POS_Tag': 'GR'},{'Word': 'زندگی', 'POS_Tag': 'NN'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'کامیاب', 'POS_Tag': 'ADJ'},{'Word': 'ہو', 'POS_Tag': 'VB'},{'Word': 'سکوں', 'POS_Tag': 'NN'},{'Word': '۔', 'POS_Tag': 'SM'}]
+
+```
+
+# Name Entity Relationships
+
+The `ner_tags_urdu` function performs named entity recognition on Urdu text, assigning named entity tags (such as `U-LOCATION` for locations) to identified entities in the input sentence. It outputs a dictionary where words are mapped to their corresponding named entity tags, facilitating tasks like information extraction and text analysis specific to Urdu language. 
+
+### 1. `ner_urdu.ner_tags_urdu (sentence)`
+
+The example output illustrates how entities like "پاکستان" are recognized as locations (U-LOCATION) within the provided sentence.
+
+**Example:**
+
+```python
+from LughaatNLP import NER_Urdu
+
+ner_urdu = NER_Urdu()
+
+sentence = "اس کتاب میں پاکستان کی تاریخ بیان کی گئی ہے۔"
+
+word_tag_dict= ner_urdu.ner_tags_urdu (sentence)
+
+print(word_tag_dict)
+
+# output  {'اس': 'O', 'کتاب': 'O', 'میں': 'O', 'پاکستان': 'U-LOCATION', 'کی': 'O', 'تاریخ': 'O', 'بیان': 'O', 'گئی': 'O', 'ہے': 'O', '۔': 'O'}
+```
+
 ## Installation
 
 You can install the `LughaatUrdu` library from PyPI using pip:
 
-```
+```bash
 pip install lughaatNLP
 ```
 
@@ -363,27 +423,45 @@ Alternatively, you can manually install it by downloading and unzipping the prov
 pip install path_to_wheel_file/LughaatNLP-1.0.2-py3-none-any.whl
 ```
 
+## Required Packages
+
+The LughaatNLP library requires the following packages:
+
+- `python-Levenshtein`
+- `tensorflow`
+- `numpy`
+
+You can install these packages using pip:
+
+```bash
+pip install python-Levenshtein tensorflow numpy
+```
+
 ## Usage
 
 After installing the library, you can import the necessary functions or classes in your Python script:
 
 ```python
+#importing Pakages
 from LughaatNLP import LughaatNLP
+from LughaatNLP import POS_urdu
+from LughaatNLP import NER_Urdu
 
+# Instance Calling
 urdu_text_processing = LughaatNLP()
-text = "آپ کیسے ہیں؟"
-normalized_text = urdu_text_processing.normalize(text)
-print(normalized_text)
+ner_urdu = NER_Urdu()
+pos_tagger = POS_urdu()
+
 ```
 ##	Future Work
 
 The future roadmap for LughaatNLP includes the
-following features: - Urdu language translator - Urdu chatbot models - Part-of-speech tagging (POS) - Named entity recognition (NER) - Text-to-speech and speech-to-text capabilities for Urdu - Urdu text summarization
+following features: - Urdu language translator - Urdu chatbot models - Text-to-speech and speech-to-text capabilities for Urdu - Urdu text summarization
 To implement these features, resources such as servers and GPU for training are required. Therefore, Muhammad Noman is collecting funds to support the development and maintenance of this library.
 
 ## Contributing
 
-This library was created by Muhammad Noman, a student at Iqra University. You can reach him via email at muhammadnomanshafiq76@gmail.com or connect with him on [LinkedIn](https://www.linkedin.com/in/muhammad-noman-shafiq-5982b62ab/).
+This library was created by Muhammad Noman, a student at Iqra University. You can reach him via email at muhammadnomanshafiq76@gmail.com or connect with him on [LinkedIn](https://www.linkedin.com/in/muhammad-noman76/).
 
 If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/MuhammadNoman76/LughaatNLP).
 
