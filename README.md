@@ -533,7 +533,7 @@ text = "اس ضمن میں چین کی جانب سے تجویز کردہ بین 
 
 summarizer = TextSummarization()
 ratio = 0.01  # Summary ratio (e.g., keep 1% of the sentences or adjust according to your preference: 10%, 20%, 40%, etc. (1% to 100%))
-summary = summarizer. summarize_unstructured_text(a, ratio)
+summary = summarizer. summarize_unstructured_text(text, ratio)
 print(summary)
 ```
 ## output 
@@ -561,9 +561,9 @@ This function converts Urdu text to speech and saves the generated speech as an 
 
 **Example Usage  1:**
 ```python
-from UrduSpeechConverter import UrduSpeechConverter
+from LughaatNLP import  UrduSpeech
 
-converter = UrduSpeechConverter()
+converter = UrduSpeech()
 
 text = 'جانب سے تجویز کردہ بین الاقوامی اقدامات بشمول بیلٹ اینڈ روڈ انیشی ایٹو، گلوبل ڈیولپمنٹ انیشی ایٹو، گلوبل سیکیورٹی انیشی ایٹو اور گلوبل سولائزیشن انیشی ایٹو مسابقت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں'
 
