@@ -84,9 +84,10 @@ After installing the library, you can import the necessary functions or classes 
 ```python
 #importing Pakages
 from LughaatNLP import LughaatNLP 
-from LughaatNLP import POS_urdu from LughaatNLP import NER_Urdu
-         from LughaatNLP import TextSummarization
-         from LughaatNLP import  UrduSpeech
+from LughaatNLP import POS_urdu 
+from LughaatNLP import NER_Urdu
+from LughaatNLP import TextSummarization
+from LughaatNLP import  UrduSpeech
 
 # Instance Calling 
 urdu_text_processing = LughaatNLP() 
