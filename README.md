@@ -1,29 +1,32 @@
 # LughaatNLP
 
-LughaatNLP is the first comprehensive Urdu language preprocessing library developed for NLP tasks in Pakistan. It provides essential tools for tokenization, lemmatization, stop word removal, Part of speech (POS), Name Entity Relationship (NER) and normalization specifically tailored for the Urdu language.
+Introducing LughaatNLP, the all-in-one Urdu language toolkit designed for NLP tasks in Pakistan. It offers essential features like tokenization, lemmatization, stop word removal, POS tagging, NER, normalization, summarization, and even text-to-speech and speech-to-text capabilities, all crafted exclusively for Urdu. Unlock the power of Urdu NLP effortlessly with LughaatNLP!
 
-# Documentation
-
-here you can see documentation:
-[Download Document](https://drive.google.com/file/d/1guI7VSlrnSQDBk40qcqvEOX_TKbCJd9b/view?usp=drive_link)
-<br><br>
-**Google Colab Link:** 
-   The documentation includes a link to a Google Colab notebook:
-   [Google Colab Notebook Link](https://colab.research.google.com/drive/1lLaUBiFq61-B7GyQ0wdNg9FyLCraAcDU?usp=sharing)
-<br><br>
-**Pypi Link:** 
-   The documentation includes a link to a Pypi link:
-   [Pypi Link](https://pypi.org/project/LughaatNLP)
-<br><br>
-**YouTube Link:** 
-   The documentation includes a link to a Youtube link for library tutorial:
-   [YouTube Link](https://www.youtube.com/playlist?list=PL4tcmUwDtJEIHZhAZ3XP9U6ZJzaS4RFbd)
-
-
-<br><br>
 <p align="center">
   <img src="https://i.imgur.com/6lKyQlo.png" alt="Alt Text" width="500" height="500">
 </p>
+
+## Documentation
+Explore the full potential of LughaatNLP through its detailed [documentation](https://lughaatnlp.blogspot.com/2024/04/mastering-urdu-text-processing.html), which includes practical usage examples, installation guides, and API references.
+
+## Google Colab Notebook
+Get hands-on with LughaatNLP using the interactive [Google Colab Notebook](https://colab.research.google.com/drive/1lLaUBiFq61-B7GyQ0wdNg9FyLCraAcDU?usp=sharing) provided in the documentation. This notebook lets you experiment with the toolkit's functionalities directly in your browser.
+
+## PyPI Package
+Install LughaatNLP effortlessly via its [PyPI page](https://pypi.org/project/LughaatNLP) to integrate Urdu NLP capabilities into your Python projects seamlessly.
+
+## YouTube Tutorial Series
+Accelerate your understanding of LughaatNLP's features with the dedicated [YouTube tutorial playlist](https://www.youtube.com/playlist?list=PL4tcmUwDtJEIHZhAZ3XP9U6ZJzaS4RFbd), offering step-by-step guidance on utilizing the toolkit for various Urdu NLP tasks.
+
+## Blogs and Articles
+Gain insights into advanced techniques and best practices for mastering Urdu text processing through informative articles like:
+
+ **Medium Link** :
+- [Introducing LughaatNLP: A Powerful Urdu Language Preprocessing Library](https://medium.com/@muhammadnomanshafiq76/introducing-lughaatnlp-a-powerful-urdu-language-preprocessing-library-488af74d3dde)
+
+ **LughaatNLP Blog** :
+- [Mastering Urdu Text Processing](https://lughaatnlp.blogspot.com/2024/04/mastering-urdu-text-processing.html)
+
 
 
 ## Features
@@ -34,8 +37,64 @@ here you can see documentation:
 - **Normalization**: Standardizes text by removing diacritics, normalizing character variations, and handling common orthographic variations in Urdu.
 - **Stemming**: Reduces words to their root form, improving text analysis and comprehension in Urdu.
 - **Spell Checker**: Identifies and corrects misspelled words in Urdu text, enhancing text quality and readability.
-- **Part of Speech Extraction**: Tag words with their grammatical categories, enabling advanced syntactic analysis.
+- **Part of Speech Extraction**: Tags words with their grammatical categories, enabling advanced syntactic analysis.
 - **Named Entity Recognition (NER)**: Identify and extract names of entities like persons, organizations, or locations.
+- **Text Summarization**: Generates concise summaries of Urdu text, facilitating quick understanding of lengthy content.
+- **Text-to-Speech Conversion**: Converts Urdu text into spoken audio, enabling accessibility and language learning applications.
+- **Speech-to-Text Conversion**: Transcribes spoken Urdu into written text, facilitating voice-based interactions and data entry.
+
+## Installation
+
+You can install the `LughaatUrdu` library from PyPI using pip:
+
+```bash
+pip install lughaatNLP
+```
+
+Alternatively, you can manually install it by downloading and unzipping the provided `LughaatNLP.rar` file and installing the wheel file using pip:
+
+```bash
+pip install path_to_wheel_file/LughaatNLP-1.0.2-py3-none-any.whl
+```
+
+## Required Packages
+
+The LughaatNLP library requires the following packages:
+
+- `python-Levenshtein`
+- `tensorflow`
+- `numpy`
+- `scikit-learn`
+- `scipy`
+- `gtts`
+- `SpeechRecognition`
+- `Pydub`
+
+
+You can install these packages using pip:
+
+```bash
+pip install python-Levenshtein tensorflow numpy scikit-learn scipy gtts SpeechRecognition pydub
+```
+
+## Usage
+
+After installing the library, you can import the necessary functions or classes in your Python script:
+
+```python
+#importing Pakages
+from LughaatNLP import LughaatNLP 
+from LughaatNLP import POS_urdu from LughaatNLP import NER_Urdu
+         from LughaatNLP import TextSummarization
+         from LughaatNLP import  UrduSpeech
+
+# Instance Calling 
+urdu_text_processing = LughaatNLP() 
+ner_urdu = NER_Urdu()
+pos_tagger = POS_urdu()
+speech_urdu = TextSummarization()
+speech_urdu = UrduSpeech()
+```
 
 ## Functions
 
@@ -381,10 +440,13 @@ pos_tagger = POS_urdu()
 predicted_pos_tags = pos_tagger.pos_tags_urdu (sentence)
 
 print(predicted_pos_tags)
-# output => [{'Word': 'میرے', 'POS_Tag': 'G'}, {'Word': 'والدین', 'POS_Tag': 'NN'},{'Word': 'نے', 'POS_Tag': 'P'},{'Word': 'میری', 'POS_Tag': 'G'},{'Word': 'تعلیم', 'POS_Tag': 'NN'},{'Word': 'اور', 'POS_Tag': 'CC'},{'Word': 'تربیت', 'POS_Tag': 'NN'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'بہت', 'POS_Tag': 'ADV'},{'Word': 'محنت', 'POS_Tag': 'NN'},{'Word': 'کی', 'POS_Tag': 'VB'},{'Word': 'تاکہ', 'POS_Tag': 'SC'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'اپنی', 'POS_Tag': 'GR'},{'Word': 'زندگی', 'POS_Tag': 'NN'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'کامیاب', 'POS_Tag': 'ADJ'},{'Word': 'ہو', 'POS_Tag': 'VB'},{'Word': 'سکوں', 'POS_Tag': 'NN'},{'Word': '۔', 'POS_Tag': 'SM'}]
+
 
 ```
-
+## output 
+```python
+# output => [{'Word': 'میرے', 'POS_Tag': 'G'}, {'Word': 'والدین', 'POS_Tag': 'NN'},{'Word': 'نے', 'POS_Tag': 'P'},{'Word': 'میری', 'POS_Tag': 'G'},{'Word': 'تعلیم', 'POS_Tag': 'NN'},{'Word': 'اور', 'POS_Tag': 'CC'},{'Word': 'تربیت', 'POS_Tag': 'NN'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'بہت', 'POS_Tag': 'ADV'},{'Word': 'محنت', 'POS_Tag': 'NN'},{'Word': 'کی', 'POS_Tag': 'VB'},{'Word': 'تاکہ', 'POS_Tag': 'SC'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'اپنی', 'POS_Tag': 'GR'},{'Word': 'زندگی', 'POS_Tag': 'NN'},{'Word': 'میں', 'POS_Tag': 'P'},{'Word': 'کامیاب', 'POS_Tag': 'ADJ'},{'Word': 'ہو', 'POS_Tag': 'VB'},{'Word': 'سکوں', 'POS_Tag': 'NN'},{'Word': '۔', 'POS_Tag': 'SM'}]
+```
 # Name Entity Relationships
 
 The `ner_tags_urdu` function performs named entity recognition on Urdu text, assigning named entity tags (such as `U-LOCATION` for locations) to identified entities in the input sentence. It outputs a dictionary where words are mapped to their corresponding named entity tags, facilitating tasks like information extraction and text analysis specific to Urdu language. 
@@ -406,53 +468,136 @@ word_tag_dict= ner_urdu.ner_tags_urdu (sentence)
 
 print(word_tag_dict)
 
-# output  {'اس': 'O', 'کتاب': 'O', 'میں': 'O', 'پاکستان': 'U-LOCATION', 'کی': 'O', 'تاریخ': 'O', 'بیان': 'O', 'گئی': 'O', 'ہے': 'O', '۔': 'O'}
+
+```
+## output 
+```python
+# output => {'اس': 'O', 'کتاب': 'O', 'میں': 'O', 'پاکستان': 'U-LOCATION', 'کی': 'O', 'تاریخ': 'O', 'بیان': 'O', 'گئی': 'O', 'ہے': 'O', '۔': 'O'}
 ```
 
-## Installation
+# Text Summarization
 
-You can install the `LughaatUrdu` library from PyPI using pip:
+The `TextSummarization` class offers automatic summarization of Urdu text by leveraging natural language processing techniques. It uses graph-based representation and scoring methods like BM25 and TF-IDF to identify and select the most important sentences for summarization. This class is designed to generate concise and informative summaries from unstructured Urdu text, making it valuable for applications requiring efficient text summarization capabilities.
 
-```bash
-pip install lughaatNLP
-```
+### 1. `summarize(text, ratio)`
 
-Alternatively, you can manually install it by downloading and unzipping the provided `LughaatNLP.rar` file and installing the wheel file using pip:
+This Python program demonstrates the use of the `TextSummarization` class from the `LughaatNLP` module to summarize a given Urdu text based on a specified ratio. The input text is a news article discussing the integration of digital technology into governance and electoral processes in China. The program initializes a `TextSummarization` instance, sets a summary ratio of 1% (adjustable to other percentages), and then generates a summary using the `summarize` method. 
 
-```bash
-pip install path_to_wheel_file/LughaatNLP-1.0.2-py3-none-any.whl
-```
-
-## Required Packages
-
-The LughaatNLP library requires the following packages:
-
-- `python-Levenshtein`
-- `tensorflow`
-- `numpy`
-
-You can install these packages using pip:
-
-```bash
-pip install python-Levenshtein tensorflow numpy
-```
-
-## Usage
-
-After installing the library, you can import the necessary functions or classes in your Python script:
+**Example:**
 
 ```python
-#importing Pakages
-from LughaatNLP import LughaatNLP
-from LughaatNLP import POS_urdu
-from LughaatNLP import NER_Urdu
+from LughaatNLP import TextSummarization
 
-# Instance Calling
-urdu_text_processing = LughaatNLP()
-ner_urdu = NER_Urdu()
-pos_tagger = POS_urdu()
 
+text = '''
+بھی حال ہی میں تیسرے انٹرنیشنل ڈیموکریسی فورم کا انعقاد بیجنگ میں کیا گیا ، جس میں 70 سے زائد ممالک اور خطوں کے تقریباً 300 عہدیداروں اور ماہرین نے اس بات پر تبادلہ خیال کیا کہ جمہوریت کو جدید ڈیجیٹل دور کی ضروریات اور گلوبل ساؤتھ کی مضبوطی کے مطابق کیسے ہونا چاہئے۔
+وسیع تناظر میں آج، ڈیجیٹل ٹیکنالوجی چین کی جمہوری گورننس کے ساتھ گہرائی سے جڑی ہوئی ہے۔ اس وقت ووٹنگ کے دوران ڈیجیٹل ٹیکنالوجی کا استعمال، حکومتی پالیسیوں کو سمجھنے، مشاورت میں حصہ لینے اور حکومتی سرگرمیوں کی نگرانی جیسے عمل کو آسان بنا رہا ہے.چین کے سرکاری انتخابی طریقہ کار میں ڈیجیٹل ٹیکنالوجی کا انضمام ووٹر رجسٹریشن، امیدواروں کی معلومات کی فراہمی کے ساتھ ساتھ ووٹنگ اور گنتی کے عمل جیسے کاموں کو آسان بنارہا ہے۔
+یہ انضمام حکومتی اداروں، رائے دہندگان اور امیدواروں کے درمیان تعامل کو بھی بڑھاتا ہے، حتمی طور پر اس بات کو یقینی بناتا ہے کہ جمہوری انتخابات عوام کی ضروریات کے مطابق زیادہ جوابدہ ہوں۔
+مزید برآں، ڈیجیٹل ٹیکنالوجی حکومت کو عوامی تشویش کے مسائل کو حل کرنے کے لئے کاروباری اداروں، ماہرین اور سول مندوبین کے درمیان آن لائن تبادلہ خیال کا اہتمام کرنے کے قابل بنا رہی ہے، جس سے مشاورت زیادہ موثر ہوتی جا رہی ہے.ڈیجیٹل ٹیک فیصلہ سازی اور انتظام کے لئے چینلز کو بھی وسعت دیتی ہے۔
+لوگ حکومت کی جانب سے شروع کیے گئے مختلف آن لائن پلیٹ فارمز جیسے ڈیجیٹل رائے عامہ کے چینلز اور آن لائن سروے کے ذریعے اپنی رائے کا اظہار کرسکتے ہیں اور مشاورت میں مشغول ہوسکتے ہیں۔ نتیجتاً ، سوشل گورننس کے لئے فیڈ بیک میکانزم نے درجہ بندی کی سطحوں کو کم کردیا ہے ، جس سے ردعمل اور کارکردگی میں تیزی سے اضافہ ہوا ہے۔
+یہاں اس حقیقت کو بھی تسلیم کرنا پڑے گا کہ، ڈیجیٹل ٹیکنالوجی کا اثر محض کارکردگی کے فوائد سے کہیں زیادہ ہے. یہ سوشل میڈیا پلیٹ فارمز اور آن لائن رپورٹنگ سسٹم کی بدولت سرکاری کارروائیوں میں شفافیت اور احتساب کو فروغ دے رہی ہے۔ عوامی جانچ پڑتال کی نگرانی میں انتظامی عمل کا معائنہ بھی شامل ہے ، جو اس بات کو یقینی بناتا ہے کہ سرکاری سرگرمیاں اخلاقی معیارات پر مکمل عمل پیرا ہوں اور عوام کو جوابدہ ہوں۔
+یوں چین میں ، ڈیجیٹل ٹیکنالوجی صرف ایک آلہ نہیں ہے۔ یہ ترقی کے لئے ایک محرک ہے جو شہریوں کو جمہوری عمل کو تشکیل دینے کے لئے بااختیار بناتا ہے. جدید پلیٹ فارمز اور شفاف حکمرانی کے طریقوں نے لوگوں کے لئے اپنے جمہوری حقوق کو براہ راست استعمال کرنے کے لئے زیادہ آسان اور موثر بنا دیا ہے۔
+ڈیجیٹل ٹیکنالوجی سے ہٹ کر اگر تیسرے انٹرنیشنل ڈیموکریسی فورم کی مزید بات کی جائے تو فورم کے شرکاء نے جہاں تکنیکی ترقی کی وکالت کی وہاں یہ بھی واضح کیا کہ کوئی ایک طرز جمہوریت یا جمہوری ماڈل واحد انتخاب نہیں ہونا چاہئے۔مغربی ریاستوں کو ایسی سیاسی شکلوں کو قبول کرنا چاہیے جو ان کی اپنی سیاسی شکلوں سے مختلف ہیں۔ساتھ ساتھ یہ ضروری ہے کہ دنیا کو ایک ایسی کمیونٹی کے نقطہ نظر سے دیکھا جائے جس کی انسانیت کے لئے مشترکہ تقدیر ہو۔
+اس ضمن میں چین کی جانب سے تجویز کردہ بین الاقوامی اقدامات بشمول بیلٹ اینڈ روڈ انیشی ایٹو، گلوبل ڈیولپمنٹ انیشی ایٹو، گلوبل سیکیورٹی انیشی ایٹو اور گلوبل سولائزیشن انیشی ایٹو مسابقت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں اور عالمی چیلنجز کا چینی دانش کے تحت موئثر حل پیش کرتے ہیں۔
+
+'''
+
+summarizer = TextSummarizer()
+ratio = 0.01  # Summary ratio (e.g., keep 1% of the sentences or adjust according to your preference: 10%, 20%, 40%, etc. (1% to 100%))
+summary = summarizer.summarize(text, ratio)
+print(summary)
 ```
+## output 
+```python
+#output =>
+گلوبل سیکیورٹی انیشی ایٹو اور گلوبل سولائزیشن انیشی ایٹو مسابقت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں اور عالمی چیلنجز کا چینی دانش کے تحت موئثر حل پیش کرتے ہیں ۔
+```
+
+### 2. `summarize_unstructured_text(text, ratio)`
+
+The `summarize_unstructured_text` function for the `Text without the sentence Structure` in the `TextSummarizer` class is designed to summarize messy or unorganized Urdu text by automatically breaking it into understandable sentences. This function helps users quickly get a condensed summary of important information from raw text that may not follow typical sentence structures. It's useful for efficiently analyzing and extracting key details from various forms of unstructured Urdu text.
+
+**Example:**
+
+```python
+from LughaatNLP import TextSummarization
+
+
+# Example usage
+
+# Text without the sentence Structure
+
+text = "اس ضمن میں چین کی جانب سے تجویز کردہ بین الاقوامی اقدامات بشمول بیلٹ اینڈ روڈ انیشی ایٹو گلوبل ڈیولپمنٹ انیشی ایٹو گلوبل سیکیورٹی انیشی ایٹو اور گلوبل سولائزیشن انیشی ایٹو مسابقت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں اور عالمی چیلنجز کا چینی دانش کے تحت موئثر حل پیش کرتے ہیں اس وقت ووٹنگ کے دوران ڈیجیٹل ٹیکنالوجی کا استعمال حکومتی پالیسیوں کو سمجھنے مشاورت میں حصہ لینے اور حکومتی سرگرمیوں کی نگرانی جیسے عمل کو آسان بنا رہا ہےچین کے سرکاری انتخابی طریقہ کار میں ڈیجیٹل ٹیکنالوجی کا انضمام ووٹر رجسٹریشن امیدواروں کی معلومات کی فراہمی کے ساتھ ساتھ ووٹنگ اور گنتی کے عمل جیسے کاموں کو آسان بنارہا ہے مزید برآں ڈیجیٹل ٹیکنالوجی حکومت کو عوامی تشویش کے مسائل کو حل کرنے کے لئے کاروباری اداروں ماہرین اور سول مندوبین کے درمیان آن لائن تبادلہ خیال کا اہتمام کرنے کے قابل بنا رہی ہے جس سے مشاورت زیادہ موثر ہوتی جا رہی ہےڈیجیٹل ٹیک فیصلہ سازی اور انتظام کے لئے چینلز کو بھی وسعت دیتی ہے بھی حال ہی میں تیسرے انٹرنیشنل ڈیموکریسی فورم کا انعقاد بیجنگ میں کیا گیا جس میں 70 سے زائد ممالک اور خطوں کے تقریباً 300 عہدیداروں اور ماہرین نے اس بات پر تبادلہ خیال کیا کہ جمہوریت کو جدید ڈیجیٹل دور کی ضروریات اور گلوبل ساؤتھ کی مضبوطی کے مطابق کیسے ہونا چاہئے یہ ترقی کے لئے ایک محرک ہے جو شہریوں کو جمہوری عمل کو تشکیل دینے کے لئے بااختیار بناتا ہے جدید پلیٹ فارمز اور شفاف حکمرانی کے طریقوں نے لوگوں کے لئے اپنے جمہوری حقوق کو براہ راست استعمال کرنے کے لئے زیادہ آسان اور موثر بنا دیا ہے ڈیجیٹل ٹیکنالوجی سے ہٹ کر اگر تیسرے انٹرنیشنل ڈیموکریسی فورم کی مزید بات کی جائے تو فورم کے شرکاء نے جہاں تکنیکی ترقی کی وکالت کی وہاں یہ بھی واضح کیا کہ کوئی ایک طرز جمہوریت یا جمہوری ماڈل واحد انتخاب نہیں ہونا چاہئے یہاں اس حقیقت کو بھی تسلیم کرنا پڑے گا کہ ڈیجیٹل ٹیکنالوجی کا اثر محض کارکردگی کے فوائد سے کہیں زیادہ ہے یہ سوشل میڈیا پلیٹ فارمز اور آن لائن رپورٹنگ سسٹم کی بدولت سرکاری کارروائیوں میں شفافیت اور احتساب کو فروغ دے رہی ہے لوگ حکومت کی جانب سے شروع کیے گئے مختلف آن لائن پلیٹ فارمز جیسے ڈیجیٹل رائے عامہ کے چینلز اور آن لائن سروے کے ذریعے اپنی رائے کا اظہار کرسکتے ہیں اور مشاورت میں مشغول ہوسکتے ہیں عوامی جانچ پڑتال کی نگرانی میں انتظامی عمل کا معائنہ بھی شامل ہے جو اس بات کو یقینی بناتا ہے کہ سرکاری سرگرمیاں اخلاقی معیارات پر مکمل عمل پیرا ہوں اور عوام کو جوابدہ ہوں یہ انضمام حکومتی اداروں رائے دہندگان اور امیدواروں کے درمیان تعامل کو بھی بڑھاتا ہے حتمی طور پر اس بات کو یقینی بناتا ہے کہ جمہوری انتخابات عوام کی ضروریات کے مطابق زیادہ جوابدہ ہوں نتیجتاً سوشل گورننس کے لئے فیڈ بیک میکانزم نے درجہ بندی کی سطحوں کو کم کردیا ہے جس سے ردعمل اور کارکردگی میں تیزی سے اضافہ ہوا ہے مغربی ریاستوں کو ایسی سیاسی شکلوں کو قبول کرنا چاہیے جو ان کی اپنی سیاسی شکلوں سے مختلف ہیں ساتھ ساتھ یہ ضروری ہے کہ دنیا کو ایک ایسی کمیونٹی کے نقطہ نظر سے دیکھا جائے جس کی انسانیت کے لئے مشترکہ تقدیر ہو وسیع تناظر میں آج ڈیجیٹل ٹیکنالوجی چین کی جمہوری گورننس کے ساتھ گہرائی سے جڑی ہوئی ہے"
+
+
+summarizer = TextSummarizer()
+ratio = 0.01  # Summary ratio (e.g., keep 1% of the sentences or adjust according to your preference: 10%, 20%, 40%, etc. (1% to 100%))
+summary = summarizer. summarize_unstructured_text(a, ratio)
+print(summary)
+```
+## output 
+```python
+
+# output => جانب سے تجویز کردہ بین الاقوامی اقدامات بشمول بیلٹ اینڈ روڈ انیشی ایٹو گلوبل ڈیولپمنٹ انیشی ایٹو گلوبل سیکیورٹی انیشی ایٹو اور گلوبل سولائزیشن انیشی ایٹو مسابقت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں۔
+```
+### Text-to-Speech & Speech-to-Text
+
+The `UrduSpeechConverter` class provides functionality to convert Urdu text to speech and vice versa using the Google Text-to-Speech (gTTS) API and SpeechRecognition library. This library supports converting Urdu text to audio files (MP3, WAV, or OGG formats) and recognizing Urdu speech from audio files (MP3 or WAV formats). Before using this library, ensure that `ffmpeg` is installed on your computer, as it is required for audio file manipulation.
+
+## Installation Requirements
+
+Before using the `UrduSpeechConverter` library, ensure you have `ffmpeg` installed on your computer and that it is accessible via the command line. `ffmpeg` is essential for converting audio files to different formats, which is necessary for speech recognition tasks. If `ffmpeg` is not installed, please install it and set the environment variable path accordingly.
+
+### 1. `text_to_speech(text, output_file_name, format)`
+
+This function converts Urdu text to speech and saves the generated speech as an audio file in the specified format.
+
+**Parameters:**
+- `text`: The Urdu text to convert to speech.
+- `output_file_folder`: The of the folder where you want to save audio.
+- `output_file_name`: The name of the output audio file (without file extension).
+- `format`: The format for the output audio file (`'wav'`, `'mp3'`, or `'ogg'`).
+
+**Example Usage  1:**
+```python
+from UrduSpeechConverter import UrduSpeechConverter
+
+converter = UrduSpeechConverter()
+
+text = 'جانب سے تجویز کردہ بین الاقوامی اقدامات بشمول بیلٹ اینڈ روڈ انیشی ایٹو، گلوبل ڈیولپمنٹ انیشی ایٹو، گلوبل سیکیورٹی انیشی ایٹو اور گلوبل سولائزیشن انیشی ایٹو مسابقت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں'
+
+converter.text_to_speech(text, output_file_name='output', format='wav')
+converter.text_to_speech(text, output_file_name='output', format='mp3')
+converter.text_to_speech(text, output_file_name='output', format='ogg')
+```
+
+## Output 
+```python
+# output =>
+# (save on the same directory) or 
+Speech saved to output.wav
+Speech saved to output.mp3
+Speech saved to output.ogg
+```
+You can also specify an output folder path:
+
+**Example Usage  2:**
+```python
+output_folder = r'C:\Users\YourName\Desktop\Testing\your-path'
+
+converter.text_to_speech(text, output_folder, output_file_name='output', format='wav')
+converter.text_to_speech(text, output_folder, output_file_name='output', format='mp3')
+converter.text_to_speech(text, output_folder, output_file_name='output', format='ogg')
+```
+
+## Output 
+```python
+# output =>
+Speech saved to CC:\Users\YourName\Desktop\Testing\your-path\output.wav
+Speech saved to CC:\Users\YourName\Desktop\Testing\your-path\output.mp3
+Speech saved to CC:\Users\YourName\Desktop\Testing\your-path\output.ogg
+```
+
 ##	Future Work
 
 The future roadmap for LughaatNLP includes the
@@ -467,4 +612,4 @@ If you find any issues or have suggestions for improvements, please feel free to
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://drive.google.com/file/d/1YcxoYrL3atF7U7vYKK_KFiKvDF-YiywT/view?usp=drive_link).
