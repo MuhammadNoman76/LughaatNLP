@@ -21,6 +21,10 @@ Accelerate your understanding of LughaatNLP's features with the dedicated [YouTu
 ## Blogs and Articles
 Gain insights into advanced techniques and best practices for mastering Urdu text processing through informative articles like:
 
+ **Geeksforgeeks Link** :
+- [LughaatNLP: A Powerful Urdu Language Preprocessing Library](https://www.geeksforgeeks.org/lughaatnlp-a-powerful-urdu-language-preprocessing-library/)
+
+
  **Medium Link** :
 - [Introducing LughaatNLP: A Powerful Urdu Language Preprocessing Library](https://medium.com/@muhammadnomanshafiq76/introducing-lughaatnlp-a-powerful-urdu-language-preprocessing-library-488af74d3dde)
 
@@ -84,10 +88,9 @@ After installing the library, you can import the necessary functions or classes 
 ```python
 #importing Pakages
 from LughaatNLP import LughaatNLP 
-from LughaatNLP import POS_urdu 
-from LughaatNLP import NER_Urdu
-from LughaatNLP import TextSummarization
-from LughaatNLP import  UrduSpeech
+from LughaatNLP import POS_urdu from LughaatNLP import NER_Urdu
+         from LughaatNLP import TextSummarization
+         from LughaatNLP import  UrduSpeech
 
 # Instance Calling 
 urdu_text_processing = LughaatNLP() 
@@ -503,7 +506,7 @@ text = '''
 
 '''
 
-summarizer = TextSummarization()
+summarizer = TextSummarizer()
 ratio = 0.01  # Summary ratio (e.g., keep 1% of the sentences or adjust according to your preference: 10%, 20%, 40%, etc. (1% to 100%))
 summary = summarizer.summarize(text, ratio)
 print(summary)
@@ -531,9 +534,9 @@ from LughaatNLP import TextSummarization
 text = "اس ضمن میں چین کی جانب سے تجویز کردہ بین الاقوامی اقدامات بشمول بیلٹ اینڈ روڈ انیشی ایٹو گلوبل ڈیولپمنٹ انیشی ایٹو گلوبل سیکیورٹی انیشی ایٹو اور گلوبل سولائزیشن انیشی ایٹو مسابقت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں اور عالمی چیلنجز کا چینی دانش کے تحت موئثر حل پیش کرتے ہیں اس وقت ووٹنگ کے دوران ڈیجیٹل ٹیکنالوجی کا استعمال حکومتی پالیسیوں کو سمجھنے مشاورت میں حصہ لینے اور حکومتی سرگرمیوں کی نگرانی جیسے عمل کو آسان بنا رہا ہےچین کے سرکاری انتخابی طریقہ کار میں ڈیجیٹل ٹیکنالوجی کا انضمام ووٹر رجسٹریشن امیدواروں کی معلومات کی فراہمی کے ساتھ ساتھ ووٹنگ اور گنتی کے عمل جیسے کاموں کو آسان بنارہا ہے مزید برآں ڈیجیٹل ٹیکنالوجی حکومت کو عوامی تشویش کے مسائل کو حل کرنے کے لئے کاروباری اداروں ماہرین اور سول مندوبین کے درمیان آن لائن تبادلہ خیال کا اہتمام کرنے کے قابل بنا رہی ہے جس سے مشاورت زیادہ موثر ہوتی جا رہی ہےڈیجیٹل ٹیک فیصلہ سازی اور انتظام کے لئے چینلز کو بھی وسعت دیتی ہے بھی حال ہی میں تیسرے انٹرنیشنل ڈیموکریسی فورم کا انعقاد بیجنگ میں کیا گیا جس میں 70 سے زائد ممالک اور خطوں کے تقریباً 300 عہدیداروں اور ماہرین نے اس بات پر تبادلہ خیال کیا کہ جمہوریت کو جدید ڈیجیٹل دور کی ضروریات اور گلوبل ساؤتھ کی مضبوطی کے مطابق کیسے ہونا چاہئے یہ ترقی کے لئے ایک محرک ہے جو شہریوں کو جمہوری عمل کو تشکیل دینے کے لئے بااختیار بناتا ہے جدید پلیٹ فارمز اور شفاف حکمرانی کے طریقوں نے لوگوں کے لئے اپنے جمہوری حقوق کو براہ راست استعمال کرنے کے لئے زیادہ آسان اور موثر بنا دیا ہے ڈیجیٹل ٹیکنالوجی سے ہٹ کر اگر تیسرے انٹرنیشنل ڈیموکریسی فورم کی مزید بات کی جائے تو فورم کے شرکاء نے جہاں تکنیکی ترقی کی وکالت کی وہاں یہ بھی واضح کیا کہ کوئی ایک طرز جمہوریت یا جمہوری ماڈل واحد انتخاب نہیں ہونا چاہئے یہاں اس حقیقت کو بھی تسلیم کرنا پڑے گا کہ ڈیجیٹل ٹیکنالوجی کا اثر محض کارکردگی کے فوائد سے کہیں زیادہ ہے یہ سوشل میڈیا پلیٹ فارمز اور آن لائن رپورٹنگ سسٹم کی بدولت سرکاری کارروائیوں میں شفافیت اور احتساب کو فروغ دے رہی ہے لوگ حکومت کی جانب سے شروع کیے گئے مختلف آن لائن پلیٹ فارمز جیسے ڈیجیٹل رائے عامہ کے چینلز اور آن لائن سروے کے ذریعے اپنی رائے کا اظہار کرسکتے ہیں اور مشاورت میں مشغول ہوسکتے ہیں عوامی جانچ پڑتال کی نگرانی میں انتظامی عمل کا معائنہ بھی شامل ہے جو اس بات کو یقینی بناتا ہے کہ سرکاری سرگرمیاں اخلاقی معیارات پر مکمل عمل پیرا ہوں اور عوام کو جوابدہ ہوں یہ انضمام حکومتی اداروں رائے دہندگان اور امیدواروں کے درمیان تعامل کو بھی بڑھاتا ہے حتمی طور پر اس بات کو یقینی بناتا ہے کہ جمہوری انتخابات عوام کی ضروریات کے مطابق زیادہ جوابدہ ہوں نتیجتاً سوشل گورننس کے لئے فیڈ بیک میکانزم نے درجہ بندی کی سطحوں کو کم کردیا ہے جس سے ردعمل اور کارکردگی میں تیزی سے اضافہ ہوا ہے مغربی ریاستوں کو ایسی سیاسی شکلوں کو قبول کرنا چاہیے جو ان کی اپنی سیاسی شکلوں سے مختلف ہیں ساتھ ساتھ یہ ضروری ہے کہ دنیا کو ایک ایسی کمیونٹی کے نقطہ نظر سے دیکھا جائے جس کی انسانیت کے لئے مشترکہ تقدیر ہو وسیع تناظر میں آج ڈیجیٹل ٹیکنالوجی چین کی جمہوری گورننس کے ساتھ گہرائی سے جڑی ہوئی ہے"
 
 
-summarizer = TextSummarization()
+summarizer = TextSummarizer()
 ratio = 0.01  # Summary ratio (e.g., keep 1% of the sentences or adjust according to your preference: 10%, 20%, 40%, etc. (1% to 100%))
-summary = summarizer. summarize_unstructured_text(text, ratio)
+summary = summarizer. summarize_unstructured_text(a, ratio)
 print(summary)
 ```
 ## output 
@@ -561,9 +564,9 @@ This function converts Urdu text to speech and saves the generated speech as an 
 
 **Example Usage  1:**
 ```python
-from LughaatNLP import  UrduSpeech
+from UrduSpeechConverter import UrduSpeechConverter
 
-converter = UrduSpeech()
+converter = UrduSpeechConverter()
 
 text = 'جانب سے تجویز کردہ بین الاقوامی اقدامات بشمول بیلٹ اینڈ روڈ انیشی ایٹو، گلوبل ڈیولپمنٹ انیشی ایٹو، گلوبل سیکیورٹی انیشی ایٹو اور گلوبل سولائزیشن انیشی ایٹو مسابقت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں'
 
@@ -597,6 +600,31 @@ converter.text_to_speech(text, output_folder, output_file_name='output', format=
 Speech saved to CC:\Users\YourName\Desktop\Testing\your-path\output.wav
 Speech saved to CC:\Users\YourName\Desktop\Testing\your-path\output.mp3
 Speech saved to CC:\Users\YourName\Desktop\Testing\your-path\output.ogg
+```
+
+### 2. `speech_to_text(audio_file, format='mp3')`
+
+This function converts Urdu speech to text and print the generated text from audio file in the specified format.
+
+**Parameters:**
+- `audio_file`: Give audio file path.
+- `format`: The format for the output audio file (`'wav'`, `'mp3'`, or `'ogg'`).
+
+**Example Usage  1:**
+```python
+from LughaatNLP import  UrduSpeech
+
+converter = UrduSpeech()
+
+audio_file = "output.mp3"
+text = converter.speech_to_text(audio_file, format='mp3')
+print(text)
+```
+
+## Output 
+```python
+# output =>
+جانب سے تجویز کردہ بین الاقوامی اقدامات بشمول بیلٹن روڈ انیشی ایٹو گلوبل ڈیولپمنٹ انیشی ایٹو گلوبل سکیورٹی انیشی ایٹو اور گلوبل سولائیزیشن انیشی ایٹو مساوت اور بالادستی کے نقطہ نظر سے یکسر جداگانہ نقطہ نظر فراہم کرتے ہیں
 ```
 
 ##	Future Work
